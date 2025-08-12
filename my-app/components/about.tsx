@@ -29,8 +29,8 @@ export function About() {
           <div className="animate-fade-in-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Samsung?</h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              For over 50 years, Samsung has been at the forefront of technological innovation. We don't just create
-              products; we craft experiences that inspire and connect people worldwide.
+              For over 50 years, Samsung has been at the forefront of technological innovation. We dont just create
+              products&apos; we craft experiences that inspire and connect people worldwide.
             </p>
 
             <div className="space-y-6">

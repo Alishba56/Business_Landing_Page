@@ -53,7 +53,7 @@ export function Testimonials() {
                       />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                  <p className="text-gray-600 mb-4 italic">&quot;{testimonial.text}&quot;</p>
                   <div className="flex items-center gap-3">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}

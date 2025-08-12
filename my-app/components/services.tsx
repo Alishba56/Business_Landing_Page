@@ -3,6 +3,7 @@
 import { Smartphone, Tv, Home, CheckCircle } from "lucide-react"
 import { CustomCard, CustomCardHeader, CustomCardContent } from "./custom-card"
 import { CustomButton } from "./custom-button"
+import Image from "next/image"
 
 interface ServicesProps {
   scrollToSection: (sectionId: string) => void
@@ -48,7 +49,7 @@ export function Services({ scrollToSection }: ServicesProps) {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Innovation Portfolio</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover Samsung's comprehensive range of cutting-edge technologies
+            Discover Samsung&#8218;	s comprehensive range of cutting-edge technologies
           </p>
         </div>
 
@@ -59,7 +60,9 @@ export function Services({ scrollToSection }: ServicesProps) {
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <CustomCard className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
+                    width={100}
+                    height={100}
                       src={service.image || "/placeholder.svg"}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"

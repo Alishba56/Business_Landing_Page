@@ -52,7 +52,7 @@ export function FAQ() {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get answers to common questions about Samsung's business solutions and services
+            Get answers to common questions about Samsungs business solutions and services
           </p>
         </div>
 

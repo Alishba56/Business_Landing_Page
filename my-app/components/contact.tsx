@@ -8,7 +8,7 @@ interface ContactProps {
   scrollToSection?: (sectionId: string) => void
 }
 
-export function Contact({ scrollToSection }: ContactProps) {
+export function Contact({ scrollToSection: _scrollToSection }: ContactProps) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
@@ -44,7 +44,7 @@ export function Contact({ scrollToSection }: ContactProps) {
           message: data.error || "Failed to send message",
         })
       }
-    } catch (error) {
+    } catch (_error) {
       setSubmitStatus({
         type: "error",
         message: "Network error. Please check your connection and try again.",
@@ -131,7 +131,9 @@ export function Contact({ scrollToSection }: ContactProps) {
           <div className="space-y-6">
             <div className="text-white">
               <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
-              <p className="text-blue-100 mb-6">Get in touch with Samsung for business inquiries and support.</p>
+              <p className="text-blue-100 mb-6">
+                Get in touch with Samsung for business inquiries and support.
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -142,7 +144,10 @@ export function Contact({ scrollToSection }: ContactProps) {
               ].map((contact, index) => {
                 const Icon = contact.icon
                 return (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
+                  >
                     <Icon className="w-5 h-5 text-blue-200" />
                     <div>
                       <div className="text-white font-medium">{contact.title}</div>

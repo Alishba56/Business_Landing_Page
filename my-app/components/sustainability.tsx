@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function Sustainability() {
   const initiatives = [
     {
@@ -68,14 +70,18 @@ export function Sustainability() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="animate-fade-in-left">
-            <img
+            <Image
+            width={500}
+            height={100}
               src="/samsung-sustainability.png"
               alt="Samsung Sustainability Initiatives"
               className="w-full h-80 object-cover rounded-2xl shadow-lg"
             />
           </div>
           <div className="animate-fade-in-right">
-            <img
+            <Image
+            width={500}
+            height={100}
               src="/samsung-global-office.png"
               alt="Samsung Global Office"
               className="w-full h-80 object-cover rounded-2xl shadow-lg"
