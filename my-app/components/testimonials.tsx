@@ -16,9 +16,9 @@ export function Testimonials() {
     {
       rating: 5,
       text: "The display quality on Samsung TVs is absolutely stunning. Movie nights have never been better!",
-      author: "Michael Chen",
+      author: "Zara Chen",
       role: "Content Creator",
-      image: "/placeholder-xtiac.png",
+      image: "/professional-woman-ceo.png",
     },
     {
       rating: 5,
@@ -58,7 +58,8 @@ export function Testimonials() {
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.author}
-                      
+                      width={100}
+                      height={100}
                       className="w-10 h-10 rounded-full border-2 border-blue-100"
                     />
                     <div>
