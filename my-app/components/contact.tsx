@@ -44,12 +44,12 @@ export function Contact({ scrollToSection: _scrollToSection }: ContactProps) {
           message: data.error || "Failed to send message",
         })
       }
-    } catch (_error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Network error. Please check your connection and try again.",
-      })
-    } finally {
+    } catch {
+  setSubmitStatus({
+    type: "error",
+    message: "Network error. Please check your connection and try again.",
+  })
+} finally {
       setIsSubmitting(false)
     }
   }

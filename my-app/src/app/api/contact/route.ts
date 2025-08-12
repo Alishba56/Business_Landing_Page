@@ -1,12 +1,15 @@
-import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json()
+    const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
-      return NextResponse.json({ error: 'All fields are required' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      );
     }
 
     const transporter = nodemailer.createTransport({
@@ -17,7 +20,7 @@ export async function POST(request: Request) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-    })
+    });
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
@@ -28,11 +31,23 @@ export async function POST(request: Request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong><br/>${message}</p>
       `,
-    })
+    });
 
-    return NextResponse.json({ success: true, message: 'Message sent successfully!' })
-  } catch (error: any) {
-    console.error('Email Error:', error)
-    return NextResponse.json({ error: error.message || 'Failed to send email' }, { status: 500 })
+    return NextResponse.json({
+      success: true,
+      message: 'Message sent successfully!',
+    });
+  } catch (error: unknown) {
+    console.error('Email Error:', error);
+
+    let errorMessage = 'Failed to send email';
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+
+    return NextResponse.json(
+      { error: errorMessage },
+      { status: 500 }
+    );
   }
 }
