@@ -49,7 +49,7 @@ export function Services({ scrollToSection }: ServicesProps) {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Innovation Portfolio</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover Samsung&#8218;	s comprehensive range of cutting-edge technologies
+            Discover Samsung&#8218;s comprehensive range of cutting-edge technologies
           </p>
         </div>
 
@@ -61,8 +61,8 @@ export function Services({ scrollToSection }: ServicesProps) {
                 <CustomCard className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                    width={100}
-                    height={100}
+                    width={500}
+                    height={500}
                       src={service.image || "/placeholder.svg"}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"

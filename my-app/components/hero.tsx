@@ -70,7 +70,7 @@ export function Hero({ scrollToSection }: HeroProps) {
               <Image
                 src="/samsung-innovation-lab.png"
                 alt="Samsung Innovation Lab"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-[300px] rounded-2xl shadow-2xl"
                 width={500}
                 height={500}
               />
