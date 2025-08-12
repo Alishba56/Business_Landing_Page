@@ -24,7 +24,7 @@ export function Footer({ scrollToSection }: FooterProps) {
             <span className="text-xl font-bold">Samsung</span>
           </div>
 
-          <nav className="flex justify-center items-center space-x-6 mb-2 md:mb-0">
+          <nav className="flex flex-wrap justify-center items-center space-x-6 mb-2 md:mb-0">
             {["services", "about", "testimonials", "faq", "contact"].map((section) => (
               <button
                 key={section}
