@@ -2,6 +2,7 @@
 
 import { Star } from "lucide-react"
 import { CustomCard, CustomCardContent } from "./custom-card"
+import Image from "next/image"
 
 export function Testimonials() {
   const testimonials = [
@@ -54,9 +55,10 @@ export function Testimonials() {
                   </div>
                   <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
                   <div className="flex items-center gap-3">
-                    <img
+                    <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.author}
+                      
                       className="w-10 h-10 rounded-full border-2 border-blue-100"
                     />
                     <div>
